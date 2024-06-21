@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="test_model_action" model="ir.actions.act_window">
+        <field name="name">List Estate Property</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="test_model_tree_view" model="ir.ui.view">
+        <field name="name">test.model.tree.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name"/>
+                <field name="postcode"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="date_availability"/>
+                <field name="property_type_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="test_model_form_view" model="ir.ui.view">
+        <field name="name">test.model.form.viewt</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="postcode"/>
+                            <field name="bedrooms"/>
+                        </group>
+                        <group>
+                            <field name="expected_price"/>
+                            <field name="selling_price"/>
+                            <field name="property_type_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="description"/>
+                                    <field name="bedrooms"/>
+                                    <field name="bedrooms"/>
+                                    <field name="living_area"/>
+                                    <field name="facades"/>
+                                    <field name="garage"/>
+                                    <field name="garden"/>
+                                    <field name="garden_area"/>
+                                    <field name="garden_orientation"/>
+                                    <field name="active"/>
+                                </group>
+                            </page>
+                            <page string="Offer">
+                                <group>
+                                    <field name="offer_ids"/>
+
+                                </group>
+                            </page>
+                            <page string="Other Info">
+                                <group>
+                                    <field name="buyer_id"/>
+                                    <field name="salesmen_id"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+                <!-- <field name="name"/>
+                <field name="expected_price"/>
+                <field name="date_availability"/> -->
+            </form>
+        </field>
+    </record>
+
+    <record id="test_model_search_view" model="ir.ui.view">
+        <field name="name">Estate Property - Search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Estate Search">
+                <field name="name" string="Nama"/>
+                <field name="postcode"/>
+                <field name="property_type_id"/>
+                <separator/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <!--  <group expand="1" string="Group By">
+                    <filter string="Provider" name="provider" context="{'group_by':'delivery_type', 'residual_visible':True}"/>
+                </group> -->
+                <!-- <filter string="Archived" name="active" domain="[('active', '=', False)]"/> -->
+                <!-- <field name="bedrooms"/>
+                <field name="selling_price"/> -->
+            </search>
+        </field>
+    </record>
+
+</odoo>
