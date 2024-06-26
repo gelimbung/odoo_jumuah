@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Wil Odoo, 2023
+# Pak Wai Ho, 2024
 # Tony Ng, 2024
 # 
 msgid ""
@@ -798,9 +799,16 @@ msgstr "此驗證碼已過期。請索取全新一個。"
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_form_account_peppol
 msgid ""
+"To generate complete electronic invoices, also set a country for this "
+"partner."
+msgstr "要產生完整的電子發票，請亦為此合作夥伴設定國家/地區。"
+
+#. module: account_peppol
+#: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_form_account_peppol
+msgid ""
 "To generate electronic invoices, also set a country and a bank account for "
 "this partner."
-msgstr ""
+msgstr "要生成電子發票，還需設定此夥伴的國家/地區和銀行帳戶。"
 
 #. module: account_peppol
 #. odoo-python
